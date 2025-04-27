@@ -177,3 +177,9 @@ Response
 ```
 
 **Note: Ensurity that only the task owner can view, update, delete task is implemented such that a party cannot access (in any way) the data of other parties.**
+
+**Uniqueness of email is check in the model itself through `unique=True`**
+
+**User instance is not passed as json data in the route `POST /api/tasks/`. The user is determined through the `Authorization` header in the backend and the value of the `user` Foreign Key field is set.**
+
+**It would be dangerous to show user's password(hashed) on `profile` route, hence it has been redacted.**
